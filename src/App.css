@@ -1,0 +1,10 @@
+.logo{
+    width: 170px;
+}
+.lista{
+    display: flex;
+    align-items: center;
+}
+.color{
+    background-color: red;
+}
