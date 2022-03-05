@@ -6,27 +6,33 @@ import {
 import { Opciones } from './Opciones';
 
 const estilos = makeStyles(theme => ({
-    drawber: {
+    drawer: {
         flexShrink: 0,
-        background: 'black'
+        background: 'black',
+        height:'200px',
+        color:'white'
     },
+    seleccion:{
+    }
 }))
 
-export const Menu = ({variant,open,onClose,mostrar}) => {
+export const Menu = ({variant,abierto,onClose,mostrar}) => {
     const classes = estilos();
     return (
+        <div>
         <Drawer
             className={classes.drawer}
-            anchor="top"
+            anchor="left"
             variant={variant}
-            open={false}
-            onClose={onClose}
+            open={abierto}
+            onClose={mostrar}
             >  
             <div
                 className={classes.toolbar}>
-            <Opciones mostrar={true}/>
+            <Opciones mostrar={mostrar}/>
             </div>
 
         </Drawer>
+        </div>
     )
 }
