@@ -11,7 +11,7 @@ export const NewProject=()=> {
       '& > :not(style)': { m: 1, width: '17ch' },
       backgroundColor:'primary.dark',
       width:'20vw',
-      ml:5
+      ml:5,
     }}
     noValidate
     autoComplete="off"

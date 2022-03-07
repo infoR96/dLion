@@ -9,6 +9,8 @@ import { Datos } from '../pages/Datos';
 import { Configuraciones } from '../pages/Configuraciones';
 
 function Rutas () {
+
+    
     const [abrir, setAbrir] = useState(false)
     const mostrar = () => {
         setAbrir(!abrir)

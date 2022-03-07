@@ -4,7 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import 'fontsource-roboto';
 import { NewProject } from '../components/Projectos/NewProject';
 import { Lista_proyectos } from '../components/Projectos/Lista_proyectos';
-import { Menu } from '../components/Projectos/Menu';
+import PersistentDrawerLeft, { Menu } from '../components/Projectos/PersistentDrawerLeft';
 import { Button } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
@@ -13,15 +13,8 @@ const useStyles = makeStyles((theme) => ({
         flexGrow: 1,
         marginTop: '70px'
     },
-    menu:{
-        borderRadius:'100%',
-        backgroundColor:'red',
-        marginLeft:'18px',
-        padding:theme.spacing(2),
-        color: 'black',
-
-        
-
+    mindraw:{
+        height:'150px'
     }
 }));
 export const Projects = () => {
@@ -41,23 +34,9 @@ export const Projects = () => {
 
     return (
         <div className={classes.root}>
-            <Button onClick={mostrar}>
-             <MenuIcon variant="contained" className={classes.menu}/>
-             </Button>
-            <h1>Presentacion de datos</h1>
-
-
-
-            <Lista_proyectos />
-            {seleccionado}
-
-
-            <Menu abierto={abierto}/>
-
-            <button onClick={mostrar}>MOSTRAR MENU</button>
-
-
-
+       
+                 <PersistentDrawerLeft seleccionado={seleccionado}/>    
+    
         </div>
 
     )
